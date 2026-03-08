@@ -1,15 +1,15 @@
 /* style.css (Dark Theme + Advanced Animations) */
 :root {
-  --primary: #818cf8;
-  --primary-hover: #6366f1;
-  --primary-glow: rgba(129, 140, 248, 0.5);
-  --secondary: #2dd4bf;
-  --secondary-glow: rgba(45, 212, 191, 0.5);
-  --bg-color: #0b1121;
-  --bg-light: #0f172a;
-  --bg-card: rgba(30, 41, 59, 0.4);
-  --text-main: #f8fafc;
-  --text-muted: #94a3b8;
+  --primary: #d946ef; /* Fuchsia */
+  --primary-hover: #c026d3;
+  --primary-glow: rgba(217, 70, 239, 0.5);
+  --secondary: #8b5cf6; /* Violet */
+  --secondary-glow: rgba(139, 92, 246, 0.5);
+  --bg-color: #180924; /* Very deep purple */
+  --bg-light: #2e1045; /* Slightly lighter deep purple */
+  --bg-card: rgba(46, 16, 69, 0.4);
+  --text-main: #fdf4ff; /* Light pinkish white */
+  --text-muted: #d8b4e2; /* Muted lavender */
   --border: rgba(255, 255, 255, 0.08);
   --font-heading: 'Outfit', sans-serif;
   --font-body: 'Inter', sans-serif;

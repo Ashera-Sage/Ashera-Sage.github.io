@@ -73,32 +73,29 @@ document.addEventListener('DOMContentLoaded', () => {
         function draw() {
             ctx.clearRect(0, 0, width, height);
             
-            ctx.fillStyle = 'rgba(129, 140, 248, 0.8)'; // More opaque particles
+            ctx.fillStyle = 'rgba(217, 70, 239, 0.8)'; // Fuchsia particles
             ctx.beginPath();
             
             particles.forEach((p, index) => {
-                // Move
+                // ... (Move and Bounce logic remains same)
                 p.x += p.vx;
                 p.y += p.vy;
 
-                // Bounce off edges
                 if (p.x < 0 || p.x > width) p.vx *= -1;
                 if (p.y < 0 || p.y > height) p.vy *= -1;
 
-                // Draw Particle
                 ctx.moveTo(p.x, p.y);
                 ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
 
-                // Connect particles to form "neural" links
                 for (let j = index + 1; j < particles.length; j++) {
                     const p2 = particles[j];
                     const dx = p.x - p2.x;
                     const dy = p.y - p2.y;
                     const dist = Math.sqrt(dx * dx + dy * dy);
 
-                    if (dist < 150) { // Increased connection distance
-                        ctx.strokeStyle = `rgba(129, 140, 248, ${0.4 - dist / 375})`; // More opaque lines
-                        ctx.lineWidth = 1; // Thicker lines
+                    if (dist < 150) { 
+                        ctx.strokeStyle = `rgba(139, 92, 246, ${0.4 - dist / 375})`; // Violet lines
+                        ctx.lineWidth = 1; 
                         ctx.beginPath();
                         ctx.moveTo(p.x, p.y);
                         ctx.lineTo(p2.x, p2.y);
